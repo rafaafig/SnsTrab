@@ -3,10 +3,6 @@
 **Terms, Expressions and Acronyms (TEA) must be organized alphabetically.**
 
 | **_TEA_** (EN)  |  **_Description_** (EN)                                           |                                       
-|:------------------------|:--------------------------------------------|
-| **Clerk** |  Person responsible for carrying out various business supporting activities on the system. |
-| **CLK** |  Acronym for _Clerk_.|
-|:------------------------|:--------------------------------------------|
 | **Administrator** |  Person responsible for configuring and managing core information required for the daily operation of the application. |
 | **Adverse Reactions** | Negative responses or side effects observed in SNS users after vaccine administration. Nurses must record any adverse reactions during the recovery period. |
 | **Application Administrator** | DGS administrators who use the application to register and manage vaccination centers, SNS users, receptionists, and nurses. |
