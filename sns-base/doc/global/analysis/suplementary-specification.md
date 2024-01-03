@@ -11,13 +11,16 @@
 
 ## Reliability
 
+- In case of a system failure there should be no data loss.
+
 ## Performance
 
 - ##### Response Time: 
 The system must ensure a maximum response time of 3 seconds for any user interaction.
 - #### System Start-up: 
 The application should start up in less than 10 seconds.
- 
+- #### Overall system availability
+Must be higher than 99% per year.
 ## Supportability
 
 - #### Data Persistence:
@@ -38,5 +41,6 @@ The application must be developed in Java using the IntelliJ IDE.
 ### Physical Constraints
 
 - #### Machine Specifications:
- The application will be deployed to a machine with 8 GB of RAM
+The application will be deployed to a machine with 8 GB of RAM
 
+The main computer which runs the applications should be protected by UPS.
