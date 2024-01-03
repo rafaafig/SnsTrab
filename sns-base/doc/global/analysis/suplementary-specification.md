@@ -28,10 +28,15 @@ Overall system availability must be higher than 99% per year.
 
 
 ### Design Constraints
+- #### Development Language and IDE:
+The application must be developed in Java using the IntelliJ IDE.
 
 ### Implementation Constraints
 
 ### Interface Constraints
 
 ### Physical Constraints
+
+- #### Machine Specifications:
+ The application will be deployed to a machine with 8 GB of RAM
 
