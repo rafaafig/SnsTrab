@@ -2,7 +2,8 @@
 
 **Terms, Expressions and Acronyms (TEA) must be organized alphabetically.**
 
-| **_TEA_** (EN)  |  **_Description_** (EN)                                           |                                       
+| **_TEA_** (EN) | **_Description_** (EN)                                                                    |                                       
+|:---------------|:------------------------------------------------------------------------------------------|
 | **Administrator** |  Person responsible for configuring and managing core information required for the daily operation of the application. |
 | **Adverse Reactions** | Negative responses or side effects observed in SNS users after vaccine administration. Nurses must record any adverse reactions during the recovery period. |
 | **Application Administrator** | DGS administrators who use the application to register and manage vaccination centers, SNS users, receptionists, and nurses. |
@@ -19,7 +20,6 @@
 | **Vaccination Centers** | Facilities administering vaccines, including Healthcare Centers and Community Mass Vaccination Centers. Characterized by various details such as name, address, and contact information. |
 | **Vaccine Administration Process** | Sequential steps involving scheduling, user arrival registration, health data verification, vaccine administration, event recording, recovery period, and potential issuance of EU COVID Digital Certificate. |
 | **Vaccine Types** | Examples include Pfizer, Moderna, and AstraZeneca. Different vaccines may exist for each disease, with distinct administration processes. |
-
 
 
 
