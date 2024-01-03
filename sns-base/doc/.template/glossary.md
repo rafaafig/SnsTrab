@@ -20,7 +20,18 @@
 | **Vaccination Centers** | Facilities administering vaccines, including Healthcare Centers and Community Mass Vaccination Centers. Characterized by various details such as name, address, and contact information. |
 | **Vaccine Administration Process** | Sequential steps involving scheduling, user arrival registration, health data verification, vaccine administration, event recording, recovery period, and potential issuance of EU COVID Digital Certificate. |
 | **Vaccine Types** | Examples include Pfizer, Moderna, and AstraZeneca. Different vaccines may exist for each disease, with distinct administration processes. |
-
+| **Core Information** | Essential data required for the daily operation of the application, including types of vaccines, vaccination centers, and employees. |
+| **Event Recording** | Process of documenting key activities in the system, such as vaccine administration, adverse reactions, and user arrivals. |
+| **Mass Vaccination Centers** | Facilities specifically created to administer vaccines of a single type, in response to an ongoing disease outbreak (e.g., Covid-19). |
+| **Operational Issues** | Challenges or problems that may affect the regular flow of activities within vaccination centers, potentially impacting the scheduled vaccine administration order. |
+| **Scheduled Vaccine Type** | The specific type of vaccine suggested by the system for the ongoing outbreak, defaulting for users unless specified otherwise. |
+| **System Instructions** | Guidance provided by the application to nurses regarding the vaccine to be administered, considering factors like vaccine type, dosage, and the user's vaccination history. |
+| **Vaccine Dosage** | The amount of vaccine administered, which may vary based on factors such as age group and specific vaccine requirements. |
+| **Vaccine Lot Number** | A unique identifier assigned to a batch of vaccines, used for tracking and quality control purposes. |
+| **Vaccination Certificate** | A document issued to SNS users upon request, confirming their vaccination status. |
+| **Vaccination Flow** | The sequential process of activities involved in administering vaccines, including scheduling, arrival registration, administration, and recovery. |
+| **Vaccination History** | The recorded information about a user's past vaccinations, which may influence the administration of subsequent vaccines. |
+| **Waiting Room** | A designated area within the vaccination center where users wait for their turn after completing the arrival registration process. |
 
 
 
