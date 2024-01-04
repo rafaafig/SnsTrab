@@ -14,7 +14,12 @@ activate Receptionist
     Receptionist -> System : starts the process of registering a employee
 
 activate System
-    System --> Receptionist : records the information and notifies the success of the operation
+    System -> Receptionist : asks to insert SNS User, and choose Vaccination Centre, Vaccine, Date/Time
+deactivate System
+
+    Receptionist -> System : insert and choose all the asked for information
+activate System
+    System -> Receptionist : records the information and notifies the success of the operation
 deactivate System
 deactivate Receptionist
 
