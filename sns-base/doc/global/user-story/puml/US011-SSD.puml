@@ -13,7 +13,7 @@ participant ":System" as System
 activate Administrator
     Administrator -> System : starts the process of registering a vaccine
 activate System
-    System -> Administrator : shows the list of types of vaccines
+    System -> Administrator : shows the list of types of vaccines, and asks to fill the data
 deactivate System
 
      Administrator -> System : fills the request data for the registration
