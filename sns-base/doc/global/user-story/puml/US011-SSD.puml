@@ -7,10 +7,24 @@ title System Sequence Diagram (SSD)
 
 autonumber
 
-actor
-participant
+actor Administrator
+participant ":System" as System
 
-activate
-deactivate
+activate Administrator
+    Administrator -> System : starts the process of registering a vaccine
+activate System
+    System -> Administrator : shows the list of types of vaccines
+deactivate System
+
+     Administrator -> System : fills the request data for the registration
+activate System
+    System -> Administrator : validates and asks for confirmation
+deactivate System
+
+Administrator -> System : confirms
+activate System
+    System --> Administrator : records the information and notifies the success of the operation
+deactivate System
+deactivate Administrator
 
 @enduml
