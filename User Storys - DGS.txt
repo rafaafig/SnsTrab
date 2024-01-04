@@ -33,11 +33,11 @@ US021
         Vaccination Centre, SNS User, Vaccine, Date/Time
 
 - Which are the methods that receptionists can use to receive the info for the appointments? Should we create a link towards e-mails, phygital documents or call transcriptions to the appointment?
-        ?
+        No
 
 US022
 - How do we prioritize the order to take  the vaccine?
-        We don’t prioritise. The registration occurs when the user arrives at the centre.
+        We don’t prioritize. The registration occurs when the user arrives at the centre.
 
 US041
 - What are the criteria for storing vaccine administration information?
