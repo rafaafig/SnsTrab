@@ -1,0 +1,29 @@
+User Storys - DGS
+US011
+- Do you provide all the certifications needed prior to the application form?
+- Do you need to take in account the age variable in this process?
+
+US012
+- How do we characterize which vaccine to list it properly?
+
+US013
+- How do we characterize the vaccination center?
+- Is there any legal requirements involved in the registration of a new vaccination center, such as licensing or certification?
+
+US014
+- Which data do you require to insert a new employee?
+- Do employees required to provide their own vaccination certificate?
+- How regularly will you preform a check on their vaccination certificate?
+
+US015
+- How do we characterize the roles to sort the list of employees?
+
+US021
+- Which data do you require to create a new schedule time for vaccination?
+- Which are the methods that receptionists can use to receive the info for the appointments? Should we create a link towards e-mails, phygital documents or call transcriptions to the appointment? 
+
+US022
+- How do we prioritize the order to take  the vaccine?
+
+US041
+- What are the criteria for storing vaccine administration information?
