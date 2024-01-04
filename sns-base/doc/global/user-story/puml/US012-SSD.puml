@@ -7,10 +7,11 @@ title System Sequence Diagram (SSD)
 
 autonumber
 
-actor
-participant
+actor Administrator
+participant ":System" as System
 
-activate
+activate Administrator
+
 deactivate
 
 @enduml
