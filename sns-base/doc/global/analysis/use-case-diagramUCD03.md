@@ -10,33 +10,36 @@ To identify domain conceptual classes, start by making a list of candidate conce
 
 **Business Transactions**
 
-*
+*   Vaccination Appointment
 
 ---
 
 **Transaction Line Items**
 
-*
+*    Vaccine Administration
 
 ---
 
 **Product/Service related to a Transaction or Transaction Line Item**
 
-*
+*   Vaccine
 
 ---
 
 
 **Transaction Records**
 
-*
+*   Vaccination Record
 
 ---  
 
 
 **Roles of People or Organizations**
 
-*
+*    Administrator
+*    Receptionist
+*    Nurse
+*    SNSUser
 
 
 ---
@@ -44,20 +47,22 @@ To identify domain conceptual classes, start by making a list of candidate conce
 
 **Places**
 
-*
+*   Waiting Room
+*   Recovery Room
 
 ---
 
 **Noteworthy Events**
 
-*
+*    Arrival Record
+*    Adverse Reaction Record
 
 ---
 
 
 **Physical Objects**
 
-*
+* EU COVID Digital Certificate
 
 ---
 
@@ -72,28 +77,32 @@ To identify domain conceptual classes, start by making a list of candidate conce
 
 **Catalogs**
 
-*
+*   Vaccine Technology Catalog
 
 ---
 
 
 **Containers**
 
-*
+*    SNS User Record
 
 ---
 
 
 **Elements of Containers**
 
-*
+*    Name
+*    BirthDate
+*    Sex
+*    PostalAddress
+*    CitizenCardNumber
 
 ---
 
 
 **Organizations**
 
-*
+*   DGS
 
 ---
 
