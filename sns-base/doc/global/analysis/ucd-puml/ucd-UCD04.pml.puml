@@ -1,35 +1,146 @@
 @startuml
 'skinparam monochrome true
-skinparam packageStyle rectangle
 'skinparam shadowing false
 
-skinparam rectangle{
-    BorderColor yellow
+class Vaccine {
+    +Id: int
+    +Name: string
+    +Brand: string
+    +Type: VaccineType
 }
 
-'title Use Case Diagram Example
-
-left to right direction
-
-rectangle "System Actors" as actors {
-    actor Freelancer
-    actor "Organization\nEmployee" as Employee
+class VaccineType {
+    +Code: string
+    +Description: string
 }
 
-note right of Freelancer
-    Actor identified but still
-    no concrete use cases.
-end note
-
-rectangle "Use Cases" as usecases{
-    usecase "UC001 - Create a Task" as UC001
-    Employee --> UC001
+class Lot {
+    +Number: string
+    +ExpirationDate: date
 }
 
-note right of actors
-    Rectangles and Titles are for
-    demonstration purposes only.
-    Omit them on your diagrams.
-end note
+class VaccinationAppointment {
+    +Id: int
+    +SNSUser: SNSUser
+    +VaccinationCenter: VaccinationCenter
+    +Date: date
+    +Time: time
+    +Vaccine: Vaccine
+}
+
+class CheckIn {
+    +Id: int
+    +SNSUser: SNSUser
+    +VaccinationAppointment: VaccinationAppointment
+}
+
+class VaccinationCall {
+    +Id: int
+    +Nurse: Nurse
+    +SNSUser: SNSUser
+}
+
+class VaccineAdministration {
+    +Id: int
+    +Nurse: Nurse
+    +SNSUser: SNSUser
+    +Vaccine: Vaccine
+    +Lot: Lot
+}
+
+class VaccinationRegist {
+    +Id: int
+    +Nurse: Nurse
+    +SNSUser: SNSUser
+    +Vaccine: Vaccine
+    +Lot: Lot
+}
+
+class Administrator {
+    +Id: int
+    +Username: string
+    +Password: string
+}
+
+class Receptionist {
+    +Id: int
+    +Username: string
+    +Password: string
+}
+
+class Nurse {
+    +Id: int
+    +Username: string
+    +Password: string
+}
+
+class SNSUser {
+    +Id: int
+    +Name: string
+    +BirthDate: date
+    +Sex: string
+    +PostalAddress: string
+    +CitizenCardNumber: string
+}
+
+class VaccinationCenter {
+    +Id: int
+    +Name: string
+    +Address: string
+    +PhoneNumber: string
+    +Email: string
+    +FaxNumber: string
+    +Website: string
+    +OpeningHours: string
+    +ClosingHours: string
+    +MaxVaccinesPerHour: int
+}
+
+class WaitingRoom {
+    +Id: int
+    +Capacity: int
+}
+
+class RecoveryRoom {
+    +Id: int
+    +Capacity: int
+    +RecoveryPeriod: int
+}
+
+class AdverseReactionRecord {
+    +Id: int
+    +Nurse: Nurse
+    +SNSUser: SNSUser
+    +Description: string
+    +Timestamp: datetime
+}
+
+class EUCOVIDDigitalCertificate {
+    +Id: int
+    +SNSUser: SNSUser
+}
+
+class SNSUserRecord {
+    +Id: int
+    +SNSUser: SNSUser
+}
+
+VaccinationAppointment --|> SNSUser
+CheckIn --|> SNSUser
+VaccinationCall --|> SNSUser
+VaccineAdministration --|> SNSUser
+VaccinationRegist --|> SNSUser
+VaccinationAppointment --|> VaccinationCenter
+CheckIn --|> VaccinationAppointment
+VaccinationCall --|> Nurse
+VaccineAdministration --|> Vaccine
+VaccinationRegist --|> Vaccine
+Administrator --|> VaccinationCenter
+Receptionist --|> VaccinationCenter
+Nurse --|> VaccinationCenter
+Nurse --|> VaccineAdministration
+Nurse --|> AdverseReactionRecord
+SNSUser --|> EUCOVIDDigitalCertificate
+SNSUserRecord --|> SNSUser
 
 @enduml

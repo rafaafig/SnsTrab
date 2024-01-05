@@ -9,7 +9,7 @@ class Vaccine {
 class VaccineType{
 }
 
-class lot {
+class Lot {
 }
 
 class VaccinationAppointment {
@@ -55,9 +55,10 @@ class SNSUserRecord {
 }
 
 ' Relationships
-VaccinationAppointment --|> SNSUser
-VaccineAdministration --|> SNSUser
-
-
+Lot --|> Vaccine
+Vaccine --|> VaccineType
+SNSUser --|> VaccinationAppointment
+Administrator --|> VaccineAdministration
+VaccinationAppointment --|> CheckIn
 
 @enduml
