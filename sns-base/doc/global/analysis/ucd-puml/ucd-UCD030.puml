@@ -1,23 +1,28 @@
-
 @startuml
-'https://plantuml.com/use-case-diagram
+'skinparam monochrome true
+'skinparam shadowing false
 
-:Main Admin: as Admin
-(Use the application) as (Use)
+title UC030 - As SNS user use the application to schedule a vaccination
 
-User -> (Start)
-User --> (Use)
+class SNSUser {
+    +Username: String
+    +Password: String
+    +PersonalInfo: String
+}
 
-Admin ---> (Use)
+class Application {
+    +displayScheduleOption(): void
+    +selectTimeSlot(): void
+    +confirmScheduling(): void
+    +provideConfirmationMessage(): void
+    +informUser(): void
+}
 
-note right of Admin : This is an example.
+' Relationships
+SNSUser "1" -- "1" Application : logs into >
+Application "1" -- "1" Application : displayScheduleOption()
+SNSUser "1" -- "1" Application : selectTimeSlot()
+Application "1" -- "1" Application : confirmScheduling()
+Application "1" -- "1" SNSUser : provideConfirmationMessage()
 
-note right of (Use)
-A note can also
-be on several lines
-end note
-
-note "This note is connected\nto several objects." as N2
-(Start) .. N2
-N2 .. (Use)
 @enduml

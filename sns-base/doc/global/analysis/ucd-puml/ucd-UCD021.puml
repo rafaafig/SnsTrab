@@ -33,16 +33,4 @@ Receptionist "1" -- "1" System : initiates >
 System "1" -- "1" User : schedules for >
 System "1" -- "1" User : notifies >
 
-' Main Success Scenario
-Receptionist --> System : initiates the vaccination scheduling process
-System --> System : displayAvailableTimeSlots()
-Receptionist --> System : selectTimeSlot()
-System --> System : confirmScheduling()
-System --> User : notifyUser()
-
-' Extensions
-Receptionist --> System : cancels the scheduling process
-System --> Receptionist : informReceptionist()
-Receptionist --> System : selects another time slot
-
 @enduml
