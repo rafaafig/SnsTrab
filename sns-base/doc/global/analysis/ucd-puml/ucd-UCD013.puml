@@ -22,8 +22,21 @@ class VaccinationCenter {
     +OperatingHours: String
 }
 
+class Pandemic {
+    +Name: String
+}
+
+class Vaccine {
+  +ID: Int
+  +Name: String
+  +Brand: String
+  +Type: VaccineType
+}
+
 ' Relationships
 Administrator "1" -- "1" System : uses >
 System "1" -- "0" VaccinationCenter : registers >
+VaccinationCenter "1" -- "0" Vaccine : uses >
+Vaccine "1" -- "0" Pandemic : fights >
 
 @enduml
