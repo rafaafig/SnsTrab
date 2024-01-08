@@ -23,8 +23,8 @@ class Employee {
 }
 
 ' Relationships
-Administrator "1" -- "1" System : uses >
-SNS "1" -- "1" System : uses >
+Administrator "1" -- "                    1" System : uses >
+SNS "                1" -- "1" System : uses >
 System "1" -- "0" Employee : provides >
 
 
