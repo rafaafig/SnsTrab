@@ -1,35 +1,32 @@
 @startuml
 'skinparam monochrome true
-skinparam packageStyle rectangle
 'skinparam shadowing false
 
-skinparam rectangle{
-    BorderColor yellow
+title UC010 - Specify a new vaccine type
+
+
+class Vaccine {
+    +ID: Int
+    +Nome: String
 }
 
-'title Use Case Diagram Example
-
-left to right direction
-
-rectangle "System Actors" as actors {
-    actor Freelancer
-    actor "Organization\nEmployee" as Employee
+class VaccineType{
+    +Code: Int
+    +ShortDesc: String
 }
 
-note right of Freelancer
-    Actor identified but still
-    no concrete use cases.
-end note
-
-rectangle "Use Cases" as usecases{
-    usecase "UC001 - Create a Task" as UC001
-    Employee --> UC001
+class VaccineTech{
+    +Name: String
+    +Description: String
 }
 
-note right of actors
-    Rectangles and Titles are for
-    demonstration purposes only.
-    Omit them on your diagrams.
-end note
+class Brand {
+    +Nome: String
+}
+
+' Relationships
+VaccineTech "1   "-"    *" VaccineType : is of <
+VaccineType "1   "-"    *"Vaccine
+Brand "1   "-"    *" Vaccine : manufactures <
 
 @enduml

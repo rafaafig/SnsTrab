@@ -7,6 +7,13 @@ class Vaccine {
 }
 
 class VaccineType{
+    +Code: Int
+    +ShortDesc: String
+}
+
+class VaccineTech{
+    +Name: String
+    +Description: String
 }
 
 class Lot {
