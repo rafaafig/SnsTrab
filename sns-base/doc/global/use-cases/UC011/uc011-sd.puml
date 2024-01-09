@@ -11,8 +11,8 @@ actor Administrator
 participant ":RegisterNewVaccineUI" as ui
 participant ":RegisterNewVaccineController" as ctrl
 participant Repositories
-participant "vaccineRepo : VaccineRepository" as vaccineRepo
-participant "vaccine : Vaccine" as vaccine
+participant ":vaccineRepo" as vaccineRepo
+participant ":vaccine" as vaccine
 
 activate Administrator
 
@@ -21,9 +21,9 @@ activate Administrator
         ui -> ctrl** : create()
         ui -> ctrl : getExistingVaccines()
         activate ctrl
-            ctrl -> Repositories : getVaccineRepository()
+            ctrl -> Repositories : getVaccineRepo()
             activate Repositories
-                Repositories -> Repositories : vaccineRepository()
+                Repositories -> Repositories : vaccineRepo()
                 Repositories-->ctrl : vaccineRepo
             deactivate Repositories
             ctrl -> vaccineRepo : getExistingVaccines()
@@ -40,9 +40,9 @@ activate Administrator
     activate ui
         ui -> ctrl : createVaccine(name, brand, type)
         activate ctrl
-            ctrl -> Repositories : getVaccineRepository()
+            ctrl -> Repositories : getVaccineRepo()
             activate Repositories
-                Repositories -> Repositories : vaccineRepository()
+                Repositories -> Repositories : vaccineRepo()
                 Repositories --> ctrl : vaccineRepo
             deactivate Repositories
             ctrl -> vaccineRepo : createVaccine(name, brand, type)
