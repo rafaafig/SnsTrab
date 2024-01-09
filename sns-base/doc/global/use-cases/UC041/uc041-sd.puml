@@ -13,7 +13,6 @@ participant ":VaccineAdministrationController" as ctrl
 participant Repositories
 participant "vaccineRepo : VaccineRepository" as vaccineRepo
 participant "vaccinationScheduleRepo : VaccinationScheduleRepository" as scheduleRepo
-participant "vaccinationSchedule : VaccinationSchedule" as schedule
 
 activate Nurse
 
