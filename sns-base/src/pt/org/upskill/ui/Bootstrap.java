@@ -42,6 +42,7 @@ public class Bootstrap implements Runnable {
 
         try {
             userRepository.add(new User("adm", roleRepository.roleByName(RoleRepository.ROLE_ADMIN), new Email("admin@upskill.pt"), new Password("admin")));
+            userRepository.add(new User("a", roleRepository.roleByName(RoleRepository.ROLE_ADMIN), new Email("a@a.a"), new Password("a")));
             userRepository.add(new User("nur", roleRepository.roleByName(RoleRepository.ROLE_NURSE), new Email("nurse@upskill.pt"), new Password("nurse")));
             userRepository.add(new User("rec", roleRepository.roleByName(RoleRepository.ROLE_RECEPTIONIST), new Email("receptionist@upskill.pt"), new Password("receptionist")));
             userRepository.add(new User("usr", roleRepository.roleByName(RoleRepository.ROLE_SNSUSER), new Email("snsuser@upskill.pt"), new Password("snsuser")));
