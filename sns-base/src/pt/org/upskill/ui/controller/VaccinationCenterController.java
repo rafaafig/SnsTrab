@@ -7,20 +7,18 @@ import java.util.List;
 public class VaccinationCenterController {
     VaccinationCenterRepository vaccinationCenterRepository = Repositories.getInstance().vaccinationCenterRepository();
 
-    private Vaccine vaccine;
+    private VaccinationCenter vaccinationCenter;
 
     public void createVaccineCenter(String name, String address, String pandemic) {
-        VaccinationCenter newCenter = vaccinationCenterRepository.createVaccinationCenter(name, address, pandemic);
+        VaccinationCenterRepository vaccinationCenterRepository = Repositories.getInstance().vaccinationCenterRepository();
     }
     public List<VaccinationCenter> vaccinationCenterListList() {
         return vaccinationCenterRepository.vaccinationCenterList();
     }
 
     public boolean confirm() {
-        vaccinationCenterRepository.save(vaccine);
+        vaccinationCenterRepository.save(vaccinationCenter);
         return true;
     }
-
-
 }
 

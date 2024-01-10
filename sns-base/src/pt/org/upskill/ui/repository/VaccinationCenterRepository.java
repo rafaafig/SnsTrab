@@ -13,23 +13,11 @@ public class VaccinationCenterRepository implements Persistable  {
     public VaccinationCenterRepository() {}
 
     private List<VaccinationCenter> vaccinationCenterList = new ArrayList<VaccinationCenter>();
-    /*
-        public int nextId() {
-            int maxId = 0;
-            for (VaccineTech vaccineTech : vaccineTechList) {
-                if (vaccineTech.id() > maxId) {
-                    maxId = vaccineTech.id();
-                };
-            }
-            return maxId+1;
-        }
 
-
-
-        public VaccineTech getById(int id) {
-            for (VaccineTech vaccineTech : vaccineTechList) {
-                if (vaccineTech.id() == id) {
-                    return vaccineTech;
+        public VaccinationCenter getByName(String name) {
+            for (VaccinationCenter vaccineCenter : vaccinationCenterList()) {
+                if (vaccineCenter.name() == name) {
+                    return vaccineCenter;
                 };
             }
             return null;
@@ -42,7 +30,7 @@ public class VaccinationCenterRepository implements Persistable  {
         private Boolean validateDelete(Object object) {
             return true;
         }
-    */
+
     public VaccinationCenter createVaccinationCenter(String name, String address, String pandemic) {
         return new VaccinationCenter(name, address, pandemic);
     }
@@ -50,22 +38,21 @@ public class VaccinationCenterRepository implements Persistable  {
     @Override
     public boolean save(Object object) {
 
-//        if (validateSave(object)) {
-//            vaccineTechList.add((VaccineTech) object);
-//            return true;
-//        }
-//
+       if (validateSave(object)) {
+           vaccinationCenterList.add((VaccinationCenter) object);
+           return true;
+       }
+
         return false;
     }
 
     @Override
     public boolean delete(Object object) {
-        /*
         if (validateDelete(object)) {
-            vaccineTechList.remove(object);
+            vaccinationCenterList.remove(object);
             return true;
         }
-        */
+
         return false;
 
     }
