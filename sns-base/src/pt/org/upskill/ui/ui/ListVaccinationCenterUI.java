@@ -11,7 +11,7 @@ public class ListVaccinationCenterUI extends UI {
     private final VaccinationCenterController vCC = new VaccinationCenterController();
 
     public void run() {
-        System.out.println("");
+        System.out.println("-----------");
         System.out.println("LIST VACCINATION CENTERS");
         System.out.println("-----------");
 
