@@ -31,4 +31,8 @@ public class Repositories {
     public VaccineTypeRepository vaccineTypeRepository() {return vaccineTypeRepository;}
     public VaccineRepository vaccineRepository() {return vaccineRepository;}
     public BrandRepository brandRepository() {return brandRepository;}
+
+    VaccinationCenterRepository vaccinationCenterRepository = new VaccinationCenterRepository();
+    public VaccinationCenterRepository vaccinationCenterRepository() {return vaccinationCenterRepository;}
+
 }
