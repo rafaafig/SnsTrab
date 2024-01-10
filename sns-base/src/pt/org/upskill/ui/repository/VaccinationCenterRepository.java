@@ -13,6 +13,8 @@ public class VaccinationCenterRepository implements Persistable  {
     public VaccinationCenterRepository() {}
 
     private List<VaccinationCenter> vaccinationCenterList = new ArrayList<VaccinationCenter>();
+
+
     /*
         public int nextId() {
             int maxId = 0;
