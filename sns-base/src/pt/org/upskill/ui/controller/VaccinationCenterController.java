@@ -10,8 +10,8 @@ public class VaccinationCenterController {
     private VaccinationCenter vaccinationCenter;
 
     public void createVaccineCenter(String name, String address, String pandemic) {
-        VaccinationCenterRepository vaccinationCenterRepository = Repositories.getInstance().vaccinationCenterRepository();
-    }
+        vaccinationCenter = vaccinationCenterRepository.createVaccinationCenter(name, address, pandemic);}
+
     public List<VaccinationCenter> vaccinationCenterListList() {
         return vaccinationCenterRepository.vaccinationCenterList();
     }

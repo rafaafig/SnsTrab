@@ -7,21 +7,13 @@ import pt.org.upskill.ui.domain.VaccineType;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class VaccinationCenterRepository implements Persistable  {
 
     public VaccinationCenterRepository() {}
 
     private List<VaccinationCenter> vaccinationCenterList = new ArrayList<VaccinationCenter>();
-
-        public VaccinationCenter getByName(String name) {
-            for (VaccinationCenter vaccineCenter : vaccinationCenterList()) {
-                if (vaccineCenter.name() == name) {
-                    return vaccineCenter;
-                };
-            }
-            return null;
-        }
 
         private Boolean validateSave(Object object) {
             return true;
