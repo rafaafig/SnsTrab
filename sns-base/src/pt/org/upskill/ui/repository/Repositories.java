@@ -35,4 +35,7 @@ public class Repositories {
     VaccinationCenterRepository vaccinationCenterRepository = new VaccinationCenterRepository();
     public VaccinationCenterRepository vaccinationCenterRepository() {return vaccinationCenterRepository;}
 
+    EmployeeRepository employeeRepository = new EmployeeRepository();
+    public EmployeeRepository employeeRepository() {return  employeeRepository;}
+
 }

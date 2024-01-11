@@ -20,6 +20,22 @@ public class Employee {
         this.phone = phone;
     }
 
+    public String getPosition() {
+        return position;
+    }
+
+    public Email getEmail() {
+        return email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
