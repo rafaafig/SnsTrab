@@ -9,23 +9,18 @@ class Administrator {
     +Password: String
 }
 
-class SNS {
-    +Name: String
-}
-
-class System {
-    +showEmployeesWithRole(): List<Employee>
-}
-
 class Employee {
     +Name: String
     +Role: String
 }
 
+class Order {
+    +  grouped by role
+    +  listed alphabetically by name
+}
 ' Relationships
-Administrator "1" -- "                    1" System : uses >
-SNS "                1" -- "1" System : uses >
-System "1" -- "0" Employee : provides >
+Administrator "1" -- "  1" Employee : List >
+Employee "1" -- "  1" Order : order by <
 
 
 

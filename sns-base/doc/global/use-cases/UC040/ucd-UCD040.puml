@@ -18,20 +18,16 @@ class SNSUser {
     +Allergies: String
 }
 
-class Receptionist {
-    +Username: String
-    +Password: String
-}
 
 
-class System {
+
+class WaitingRoom {
     +showInformation(): void
 }
 
 ' Relationships
-Nurse "1" -- System : uses >
-Receptionist "1" -- System : registers >
-SNSUser "1" -- Receptionist : provides info >
+Nurse "1" -- WaitingRoom : provides info <
+SNSUser "1" -- WaitingRoom : is on >
 
 
 @enduml

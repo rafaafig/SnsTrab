@@ -20,15 +20,7 @@ class SNSUser {
     +SNSUserNumber: String
 }
 
-class System {
-    +validateData(): Boolean
-    +recordInformation(): void
-    +notifySuccess(): void
-}
-
 ' Relationships
-Receptionist "1" -- "1" System : uses >
-System "1" -- "1" SNSUser : registers >
-
+Receptionist "1" -- "1" SNSUser : registers >
 
 @enduml

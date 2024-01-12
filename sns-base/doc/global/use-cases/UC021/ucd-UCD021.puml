@@ -9,14 +9,6 @@ class Receptionist {
     +Password: String
 }
 
-class System {
-    +displayAvailableTimeSlots(): void
-    +selectTimeSlot(): void
-    +confirmScheduling(): void
-    +notifyUser(): void
-    +informReceptionist(): void
-}
-
 class User {
     +Name: String
     +BirthDate: Date
@@ -29,8 +21,7 @@ class User {
 }
 
 ' Relationships
-Receptionist "1" -- "1" System : initiates >
-System "1" -- "1" User : schedules for >
-System "1" -- "1" User : notifies >
+Receptionist "1" -- "1" User : schedules for >
+Receptionist "1" -- "1" User : notifies >
 
 @enduml

@@ -9,13 +9,6 @@ class Receptionist {
     +Password: String
 }
 
-class System {
-    +promptForAppointmentDetails(): void
-    +verifyDetailsAndConfirmArrival(): void
-    +provideInstructions(): void
-    +notifyReceptionist(): void
-}
-
 class SNSUser {
     +Name: String
     +BirthDate: Date
@@ -28,7 +21,6 @@ class SNSUser {
 }
 
 ' Relationships
-Receptionist "1" -- "1" System : initiates >
-System "1" -- "1" SNSUser : registers for arrival >
+Receptionist "1" -- "1" SNSUser : registers the arrival of >
 
 @enduml

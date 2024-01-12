@@ -9,14 +9,6 @@ class Administrator {
     +Password: String
 }
 
-class SNSUser {
-    +Username: String
-}
-
-class System {
-    +showVaccineList(): List<Vaccine>
-}
-
 class Vaccine {
     +ID: Int
     +Name: String
@@ -30,9 +22,7 @@ class Order {
 }
 
 ' Relationships
-Administrator "1" -- "1" System : uses >
-SNSUser "1" -- "1" System : uses >
-System "1" -- "1" Vaccine : provides >
-System "1" -- "1" Vaccine : provides >
-System "1" -- "1" Order : ordered by >
+Administrator "1" -- "1" Vaccine : lists >
+Vaccine "1" -- "1" Order : grouped by >
+
 @enduml

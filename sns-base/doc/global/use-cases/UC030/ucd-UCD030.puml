@@ -10,7 +10,7 @@ class SNSUser {
     +PersonalInfo: String
 }
 
-class Application {
+class VaccinationCenter {
     +displayScheduleOption(): void
     +selectTimeSlot(): void
     +confirmScheduling(): void
@@ -19,10 +19,5 @@ class Application {
 }
 
 ' Relationships
-SNSUser "1" -- "1" Application : logs into >
-Application "1" -- "1" Application : displayScheduleOption()
-SNSUser "1" -- "1" Application : selectTimeSlot()
-Application "1" -- "1" Application : confirmScheduling()
-Application "1" -- "1" SNSUser : provideConfirmationMessage()
-
+SNSUser "1" -- "1" VaccinationCenter : schedules >
 @enduml

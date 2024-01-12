@@ -27,6 +27,6 @@ class Brand {
 ' Relationships
 VaccineTech "1   "-"    *" VaccineType : is of <
 VaccineType "1   "-"    *"Vaccine
-Brand "1   "-"    *" Vaccine : manufactures <
+Brand "1   "-"    *" Vaccine : manufactured by <
 
 @enduml

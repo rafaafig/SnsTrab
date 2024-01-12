@@ -20,14 +20,8 @@ class SNSUser {
 
 
 
-class System {
-    +showSNSUsers(): combo box
-    +showSuccess(): void
-}
-
 ' Relationships
-Nurse "1" -- System : registers >
-Nurse "1" -- SNSUser : vaccinates >
+Nurse "1" -- SNSUser : vaccination and registation >
 
 
 @enduml
