@@ -20,8 +20,8 @@ public class EmployeeRepository implements Persistable {
         return true;
     }
 
-    public Employee createEmployee(String email, String name) throws Exception {
-        return new Employee(new Email(email), name);
+    public Employee createEmployee(String email, String name, String role, int phone) throws Exception {
+        return new Employee(new Email(email), name, role, phone);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class EmployeeRepository implements Persistable {
     public List<Employee> getEmployeesByRole(String role) {
         List<Employee> employeesByRole = new ArrayList<>();
         for (Employee employee : employeeList) {
-            if (role.equals(employee.getPosition())) {
+            if (role.equals(employee.getRole())) {
                 employeesByRole.add(employee);
             }
         }

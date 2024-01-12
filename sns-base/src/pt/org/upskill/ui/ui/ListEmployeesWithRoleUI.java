@@ -14,7 +14,6 @@ public class ListEmployeesWithRoleUI extends UI {
         System.out.println("-----------");
 
         try {
-            // Assuming you have a method in EmployeeController for getting employees by role
             List<Employee> employeesByRole = employeeController.getEmployeesByRole("desiredRole");
 
             if (employeesByRole.isEmpty()) {
@@ -23,7 +22,7 @@ public class ListEmployeesWithRoleUI extends UI {
                 for (Employee employee : employeesByRole) {
                     System.out.println("Email: " + employee.getEmail().address() +
                             " - Name: " + employee.getName() +
-                            " - Position: " + employee.getPosition() +
+                            " - Position: " + employee.getRole() +
                             " - Phone: " + employee.getPhone());
                 }
             }

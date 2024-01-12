@@ -12,16 +12,20 @@ public class EmployeeController {
     private Employee employee;
 
 
-    public void createEmployee(String email, String name) throws Exception {
-        employee = new Employee(new Email(email), name);
+    public void createEmployee(String email, String name, String role, int phone) throws Exception {
+        employee = new Employee(new Email(email), name, role, phone);
     }
 
     public void setEmployeePosition(String position) {
-        employee.setPosition(position);
+        employee.setRole(position);
+    }
+    public void setEmployeeName(String name) {
+        employee.setName(name);
     }
 
 
-    public void setEmployeePhone(String phone) {
+
+    public void setEmployeePhone(int phone) {
         employee.setPhone(phone);
     }
 

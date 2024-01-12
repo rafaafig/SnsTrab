@@ -21,21 +21,20 @@ public class RegisterEmployeeUI extends UI {
             System.out.println("Email");
             String email = scanner.nextLine();
 
+
             System.out.println("Name");
             String name = scanner.nextLine();
+            employeeController.setEmployeeName(name);
 
-            // Create employee with email and name
-            employeeController.createEmployee(email, name);
-
-            // Set employee position
             System.out.println("Position");
-            String position = scanner.nextLine();
-            employeeController.setEmployeePosition(position);
+            String role = scanner.nextLine();
+            employeeController.setEmployeePosition(role);
 
-            // Set employee phone
             System.out.println("Phone");
-            String phone = scanner.nextLine();
+            int phone = Integer.parseInt(scanner.nextLine());
             employeeController.setEmployeePhone(phone);
+
+            employeeController.createEmployee(email, name, role, phone);
 
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());

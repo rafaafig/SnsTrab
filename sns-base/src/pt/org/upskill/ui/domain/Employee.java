@@ -5,23 +5,28 @@ import pt.org.upskill.ui.auth.Email;
 public class Employee {
     private final Email email;
     private String name;
-    private String position;
-    private String phone;
+    private String role;
+    private int phone;
 
-    public Employee(Email email, String name) {
+    public Employee(Email email, String name, String role, int phone) {
         this.email = email;
         this.name = name;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-    public void setPhone(String phone) {
+        this.role = role;
         this.phone = phone;
     }
 
-    public String getPosition() {
-        return position;
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setRole(String role) {
+        this.role = role;
+    }
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public String getRole() {
+        return role;
     }
 
     public Email getEmail() {
@@ -32,7 +37,7 @@ public class Employee {
         return name;
     }
 
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
 
