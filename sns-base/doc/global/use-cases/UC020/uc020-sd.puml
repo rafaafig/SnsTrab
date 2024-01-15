@@ -7,7 +7,7 @@ title Register SNS User
 
 autonumber
 
-actor Administrator
+actor Receptionist
 participant ":RegisterSNSUserUI" as ui
 participant ":RegisterSNSUserController" as ctrl
 participant Repositories
