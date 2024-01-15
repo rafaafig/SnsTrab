@@ -5,12 +5,12 @@
 title UC012 - List all vaccines
 
 class Administrator {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
 class Vaccine {
-    +ID: Int
+    +ID: Int [pk]
     +Name: String
     +Brand: String
     +Type: VaccineType

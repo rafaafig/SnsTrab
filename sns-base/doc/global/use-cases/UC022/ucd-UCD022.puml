@@ -5,7 +5,7 @@
 title UC022 - Arrival of a SNS user to take the vaccine
 
 class Receptionist {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
@@ -16,8 +16,9 @@ class SNSUser {
     +PostalAddress: String
     +PhoneNumber: String
     +EmailAddress: String
-    +CitizenCardNumber: String
+    +CitizenCardNumber: String [pk2]
     +VaccinationScheduled: Boolean
+    +SNSNumber: Int [pk]
 }
 
 ' Relationships

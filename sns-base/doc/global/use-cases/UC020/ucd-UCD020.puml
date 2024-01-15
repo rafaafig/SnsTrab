@@ -5,7 +5,7 @@ skinparam shadowing false
 title UC020 - Register SNS User
 
 class Receptionist {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
@@ -16,8 +16,8 @@ class SNSUser {
     +PostalAddress: String
     +PhoneNumber: String
     +EmailAddress: String
-    +CitizenCardNumber: String
-    +SNSUserNumber: String
+    +CitizenCardNumber: String [pk2]
+    +SNSUserNumber: String [pk]
 }
 
 ' Relationships

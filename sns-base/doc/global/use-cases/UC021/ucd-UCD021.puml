@@ -5,7 +5,7 @@
 title UC021 - Schedule a vaccination
 
 class Receptionist {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
@@ -16,8 +16,9 @@ class User {
     +PostalAddress: String
     +PhoneNumber: String
     +EmailAddress: String
-    +CitizenCardNumber: String
+    +CitizenCardNumber: String [pk2]
     +VaccinationScheduled: Boolean
+    +SNSNumber: Int [pk]
 }
 
 ' Relationships

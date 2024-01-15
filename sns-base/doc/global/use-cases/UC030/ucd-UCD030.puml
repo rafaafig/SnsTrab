@@ -5,7 +5,7 @@
 title UC030 - As SNS user use the application to schedule a vaccination
 
 class SNSUser {
-    +Username: String
+    +Username: String [pk]
     +Password: String
     +PersonalInfo: String
 }

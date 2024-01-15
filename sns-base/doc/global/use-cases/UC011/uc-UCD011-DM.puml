@@ -6,20 +6,20 @@
 title UC011 - Register vaccine
 
 class Administrator {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
 
 class Vaccine {
-    +ID: Int
+    +ID: Int [pk]
     +Name: String
     +Brand: String
     +Type: VaccineType
 }
 
 class VaccineType {
-    +Code: Int
+    +Code: Int [pk]
     +ShortDesc: String
 }
 

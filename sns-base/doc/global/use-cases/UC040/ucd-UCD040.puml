@@ -5,7 +5,7 @@ skinparam shadowing false
 title UC040 - Consult users in a waiting room
 
 class Nurse {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
@@ -13,7 +13,7 @@ class SNSUser {
     +Name: String
     +BirthDate: Date
     +Sex: String
-    +SNS User number: Int
+    +SNS User number: Int [pk]
     +Vaccinations: String
     +Allergies: String
 }

@@ -5,7 +5,7 @@
 title UC013 - Register vaccination center
 
 class Administrator {
-    +Username: String
+    +Username: String [pk]
     +Password: String
 }
 
@@ -14,14 +14,15 @@ class VaccinationCenter {
     +Location: String
     +ContactInformation: String
     +OperatingHours: String
+    +ID: Int [pk]
 }
 
 class Pandemic {
-    +Name: String
+    +Name: String [fk]
 }
 
 class VaccineType {
-  +ID: Int
+  +ID: Int [pk]
   +Name: String
   +Brand: String
 }
