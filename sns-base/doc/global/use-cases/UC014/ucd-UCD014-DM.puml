@@ -5,18 +5,18 @@
 title UC014 - Register employee
 
 class Administrator {
-    +Username: String [pk]
+    +Username: String [PK]
     +Password: String
 }
 
 class SNS {
-    +Name: String
+    +Name: String [PK]
 }
 
 class Employee {
     +Name: String
     +JobDescription: String
-    +SNSNumber: String [pk]
+    +SNSNumber: String [PK]
 
 }
 

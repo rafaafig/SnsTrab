@@ -5,32 +5,32 @@
 title UC013 - Register vaccination center
 
 class Administrator {
-    +Username: String [pk]
+    +Username: String [PK]
     +Password: String
 }
 
 class VaccinationCenter {
+    +ID: Int [PK]
     +Name: String
     +Location: String
     +ContactInformation: String
     +OperatingHours: String
-    +ID: Int [pk]
 }
 
 class Pandemic {
-    +Name: String [fk]
+    +Name: String [PK]
 }
 
 class VaccineType {
-  +ID: Int [pk]
-  +Name: String
-  +Brand: String
+    +ID: Int [PK]
+    +Name: String
+    +Brand: String [FK]
 }
 
 ' Relationships
 Administrator "1" -- "1" VaccinationCenter : registers >
 VaccinationCenter "1" -- "1" VaccineType : uses >
-VaccineType "1" -- "0" Pandemic : fights >
+VaccineType "1" -- "0..1" Pandemic : fights >
 VaccinationCenter "1" -- "1" Pandemic : cause of creation <
 
 @enduml

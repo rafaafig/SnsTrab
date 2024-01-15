@@ -5,15 +5,15 @@
 title UC012 - List all vaccines
 
 class Administrator {
-    +Username: String [pk]
+    +Username: String [PK]
     +Password: String
 }
 
 class Vaccine {
-    +ID: Int [pk]
+    +ID: Int [PK]
     +Name: String
     +Brand: String
-    +Type: VaccineType
+    +Type: VaccineType [FK]
 }
 
 class Order {
@@ -21,8 +21,14 @@ class Order {
     +  listed alphabetically by name
 }
 
+class VaccineType {
+     +ID: Int [pk]
+     +Name: String
+     +Brand: String [FK]
+}
+
 ' Relationships
 Administrator "1" -- "1" Vaccine : lists >
 Vaccine "1" -- "1" Order : grouped by >
-
+Vaccine "1" -- "1" VaccineType : is of >
 @enduml

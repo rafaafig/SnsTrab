@@ -5,14 +5,14 @@
 title UC015 - List employees with a role
 
 class Administrator {
-    +Username: String [pk]
+    +Username: String [PK]
     +Password: String
 }
 
 class Employee {
     +Name: String
     +Role: String
-    +ID: Int [pk]
+    +ID: Int [PK]
 }
 
 class Order {

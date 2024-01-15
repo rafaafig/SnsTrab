@@ -6,12 +6,12 @@ title UC010 - Specify a new vaccine type
 
 
 class Vaccine {
-    +ID: Int
+    +ID: Int [PK]
     +Nome: String
 }
 
 class VaccineType{
-    +Code: Int
+    +Code: Int [PK]
     +ShortDesc: String
 }
 
@@ -21,7 +21,7 @@ class VaccineTech{
 }
 
 class Brand {
-    +Nome: String
+    +Nome: String [PK]
 }
 
 ' Relationships
