@@ -32,7 +32,7 @@ activate Administrator
                 vaccCenterRepo --> ctrl : existingVaccinationCenters
             deactivate vaccCenterRepo
             ctrl --> ui : existingVaccinationCenters
-            ui --> Administrator : shows the existing Vaccination Centers and requests data
+            ui --> Administrator : Requests data to register a new vaccination center
         deactivate ctrl
     deactivate ui
 

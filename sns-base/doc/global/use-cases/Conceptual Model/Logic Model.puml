@@ -1,0 +1,71 @@
+@startuml
+title UC010 - Specify a new vaccine type
+
+
+
+
+class VaccineTech{
+    +Name: String
+    +Description: String
+    +ID: int [PK]
+    +ID Pandemic: int [FK]
+
+}
+
+class Brand {
+    +Name: String
+    +ID: int [PK]
+}
+
+class Administrator {
+    +ID: int [PK]
+}
+
+class Vaccine {
+    +ID: Int [PK]
+    +Name: String
+    +Type: ID VaccineType [FK]
+    +ID Brand : INT [FK]
+    +ID Administrator: Int [FK]
+}
+
+class VaccineType {
+     +ID: Int [pk]
+     +Name: String
+     +Brand: String [FK]
+     +VaccineTech ID : Int [FK]
+}
+
+class VaccinationCenter {
+    +ID: Int [PK]
+    +Name: String
+    +Location: String
+    +ContactInformation: String
+    +OperatingHours: String
+    +Pandemic ID: INT [FK]
+}
+
+class Pandemic {
+    +ID: Int [PK]
+    +Name: String
+}
+
+class Employee {
+    +Name: String
+    +JobDescription: String
+    +SNSNumber: String [PK]
+    +ID: Int [PK]
+}
+
+' Relationships
+Administrator "1" -- "  *" Employee : >
+Employee "1" -- "*" VaccinationCenter :  >
+Administrator "1" -- "*" VaccinationCenter :  >
+VaccineTech "1" -- "1" Pandemic :  <
+VaccinationCenter "1" -- "1" Pandemic :  <
+Administrator "1" -- "*" Vaccine :  >
+Vaccine "*" -- "1" Brand :  <
+VaccineTech "1   "-"    *" VaccineType : >
+VaccineType "1   "-"    *"Vaccine : >
+
+@enduml
