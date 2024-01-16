@@ -57,7 +57,45 @@ class Employee {
     +ID: Int [PK]
 }
 
+class Receptionist {
+    +Employee ID: INT [FK]
+    +Role: String
+}
+
+class SNSUser {
+    +Name: String
+    +BirthDate: Date
+    +Sex: String
+    +PostalAddress: String
+    +PhoneNumber: String
+    +EmailAddress: String
+    +CitizenCardNumber: String [PK3]
+    +SNSUserNumber: String [PK2]
+    +ID: Int [PK1]
+}
+
+class WaitingRoom{
+    +SNSUser ID's: int [FK]
+}
+
+class VaccinationHub{
+    +SNSUser ID's: int [FK]
+}
+
+class Nurse{
+     +Employee ID: INT [FK]
+     +Role: String
+}
+
 ' Relationships
+VaccinationCenter "1" -- "1" VaccinationHub: >
+VaccinationCenter "1" -- "1" WaitingRoom: >
+Nurse "*" -- "1" VaccinationHub :  >
+Nurse "*" -- "1" Employee :  <
+SNSUser "*" -- "1" VaccinationHub :  >
+SNSUser "*" -- "1" WaitingRoom :  >
+Receptionist "*" -- "1" Employee :  <
+Receptionist "1" -- "*" SNSUser :  >
 Administrator "1" -- "  *" Employee : >
 Employee "1" -- "*" VaccinationCenter :  >
 Administrator "1" -- "*" VaccinationCenter :  >
