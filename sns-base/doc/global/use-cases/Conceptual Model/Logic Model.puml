@@ -80,6 +80,7 @@ class WaitingRoom{
 
 class VaccinationHub{
     +SNSUser ID's: int [FK]
+    +Nurse ID: Int [FK]
 }
 
 class Nurse{
