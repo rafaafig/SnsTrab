@@ -93,6 +93,7 @@ VaccinationCenter "1" -- "1" VaccinationHub: >
 VaccinationCenter "1" -- "1" WaitingRoom: >
 Nurse "*" -- "1" VaccinationHub :  >
 Nurse "*" -- "1" Employee :  <
+Nurse "*" -- "1" WaitingRoom :  <
 SNSUser "*" -- "1" VaccinationHub :  >
 SNSUser "*" -- "1" WaitingRoom :  >
 Receptionist "*" -- "1" Employee :  <
