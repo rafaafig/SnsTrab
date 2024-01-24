@@ -1,0 +1,82 @@
+@startuml
+
+entity Seccção {
+    + Codigo: int [PK]
+    + Nome: string
+}
+
+entity Funcionario_Manutencao{
+    + ID_Especialidade [FK]
+}
+
+entity Funcionario {
+    + NumeroIdentificativo: int [PK]
+    + BI: string
+    + Nome: string
+}
+
+entity Manutencao{
+    + ID_Especialidade: string [FK]
+    + Pedido: int [FK]
+}
+
+entity Especialidade {
+    + ID: int [PK]
+    + Nome: string
+}
+
+entity Pedido {
+    + NumeroSequencial: int [PK]
+    + DataHoraEnvio: datetime
+    + SecaoOrigem: int [FK]
+    + FuncionarioSolicitante: int [FK]
+}
+
+entity Atividade {
+    + NumeroAtividade: int [PK]
+    + DataInicio: datetime
+    + DataFim: datetime
+    + FuncionarioResponsavel: int [FK]
+    + Especialidade: int [FK]
+}
+
+entity Material {
+    + Codigo: int [PK]
+    Designacao: string
+    UnidadeMedida: string
+    Categoria: string
+}
+
+entity Fornecedor {
+    + NumeroContribuinte: string [PK]
+    NomeEmpresa: string
+    Morada: string
+}
+
+entity Compra {
+    + id: int [PK]
+    Atividade: int [FK]
+    Fornecedor: string [FK]
+    QuantidadeAdquirida: int
+    DataAquisicao: datetime
+    Preco: decimal
+}
+
+'Funcionario_Manutencao "1" -- "1" Manutencao :>
+Funcionario_Manutencao "1" -- "1" Especialidade :>
+Funcionario_Manutencao "1" -- "1" Atividade :>
+Funcionario "1" -- "1" Funcionario_Manutencao :>
+Especialidade "1" -- "1" Manutencao :<
+Seccção "1" -- "1" Pedido :>
+'Pedido "1" -- "1" Especialidade :<
+Funcionario "1" -- "*" Seccção :>
+Pedido "*" -- "1" Manutencao :>
+Manutencao "1" -- "1" Atividade :>
+'Manutencao "1" -- "*" Pedido :<
+'Atividade "1" -- "*" Material :<
+Material "1" -- "*" Fornecedor :<
+Atividade "1" -- "1" Compra :<
+Compra "1" -- "*" Material :<
+
+
+@enduml
