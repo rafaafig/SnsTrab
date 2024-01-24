@@ -19,6 +19,9 @@ entity Manutencao{
     + ID_Especialidade: string [FK]
     + Pedido: int [FK]
 }
+entity Responsável{
+    + NumeroIdentificativo [FK]
+}
 
 entity Especialidade {
     + ID: int [PK]
@@ -42,35 +45,37 @@ entity Atividade {
 
 entity Material {
     + Codigo: int [PK]
-    Designacao: string
-    UnidadeMedida: string
-    Categoria: string
+    + Designacao: string
+    + UnidadeMedida: string
+    + Categoria: string
 }
 
 entity Fornecedor {
     + NumeroContribuinte: string [PK]
-    NomeEmpresa: string
-    Morada: string
+    + NomeEmpresa: string
+    + Morada: string
 }
 
 entity Compra {
     + id: int [PK]
-    Atividade: int [FK]
-    Fornecedor: string [FK]
-    QuantidadeAdquirida: int
-    DataAquisicao: datetime
-    Preco: decimal
+    + Atividade: int [FK]
+    + Fornecedor: string [FK]
+    + QuantidadeAdquirida: int
+    + DataAquisicao: datetime
+    + Preco: decimal
 }
 
-Funcionario_Manutencao "1" -- "1" Especialidade :>
-Funcionario_Manutencao "1" -- "1" Atividade :>
-Funcionario "1" -- "1" Funcionario_Manutencao :>
-Especialidade "1" -- "1" Manutencao :<
-Seccção "1" -- "1" Pedido :>
-Funcionario "1" -- "*" Seccção :>
+Funcionario_Manutencao "*" -- "1" Especialidade :>
+Funcionario_Manutencao "*" -- "1" Atividade :>
+Funcionario_Manutencao "1" -- "1" Responsável :>
+Responsável "1" -- "1" Atividade :>
+Funcionario "*" -- "*" Funcionario_Manutencao :>
+Especialidade "1" -- "1" Manutencao :>
+Seccção "*" -- "*" Pedido :>
+Funcionario "*" -- "*" Seccção :>
 Pedido "*" -- "1" Manutencao :>
-Manutencao "1" -- "1" Atividade :>
-Material "1" -- "*" Fornecedor :<
+Manutencao "1" -- "*" Atividade :>
+Material "*" -- "*" Fornecedor :<
 Atividade "1" -- "1" Compra :<
 Compra "1" -- "*" Material :<
 
