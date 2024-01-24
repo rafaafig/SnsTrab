@@ -17,8 +17,10 @@ class VaccinationCenter {
 }
 
 class SNS{
+    + Appointment_ID : String [PK]
     + SNSUser_CC : String [FK]
     + VaccinationCenter_ID : int [FK]
+    + Date : Date
 }
 
 ' Relationships
