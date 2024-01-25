@@ -7,7 +7,7 @@ title UC020 - Register SNS User at Vaccination Center
 class VaccinationCenter {
     + VaccinationCenter_ID : int [PK]
     + Location : String
-    + AppointmentLists_ID : List [FK]
+    + AppointmentLists_ID : String [FK]
 }
 class Receptionist {
     +CitizenCardNumber_Recep: String [PK]
