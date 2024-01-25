@@ -2,7 +2,7 @@ package pt.org.upskill.dto;
 
 import pt.org.upskill.domain.Pandemic;
 
-public class PandemicDTO {
+public class PandemicDTO implements DTO{
     private Integer ID_Pandemic;
     private String NamePandemic;
     public Integer ID_Pandemic(){ return this.ID_Pandemic;}
