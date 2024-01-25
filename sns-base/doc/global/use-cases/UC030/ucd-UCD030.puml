@@ -5,19 +5,25 @@
 title UC030 - As SNS user use the application to schedule a vaccination
 
 class SNSUser {
-    +Username: String [pk]
-    +Password: String
-    +PersonalInfo: String
+    + SNSUser_CC: String [PK]
+    + Password: String
+    + SNSUser_E-mail: String
+    + SNSUser_PhoneNumber: int
 }
 
 class VaccinationCenter {
-    +displayScheduleOption(): void
-    +selectTimeSlot(): void
-    +confirmScheduling(): void
-    +provideConfirmationMessage(): void
-    +informUser(): void
+    + VaccinationCenter_ID : int [PK]
+    + Location : String
+}
+
+class SNS{
+    + Appointment_ID : String [PK]
+    + SNSUser_CC : String [FK]
+    + VaccinationCenter_ID : int [FK]
+    + Date : Date
 }
 
 ' Relationships
-SNSUser "1" -- "1" VaccinationCenter : schedules >
+SNSUser "*" -- "1" SNS :  >
+SNS "1" -- "*" VaccinationCenter :  >
 @enduml
