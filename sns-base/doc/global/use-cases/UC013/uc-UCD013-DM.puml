@@ -10,6 +10,7 @@ class Administrator {
     +Password: String
 }
 class SNS{
+    +ID_Registo Int[PK]
     +ID_VACCenter Int[FK]
     +CC_ADM String[FK]
 }
