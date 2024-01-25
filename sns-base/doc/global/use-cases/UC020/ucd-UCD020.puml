@@ -12,6 +12,8 @@ class VaccinationCenter {
 class Receptionist {
     +CitizenCardNumber_Recep: String [PK]
     +Password: String
+    +CitizenCardNumber_SNSUser: String [FK]
+
 }
 
 class SNSUser {
@@ -26,7 +28,6 @@ class SNSUser {
 }
 class SNS {
     +Appointment_ID: String [PK]
-    +CitizenCardNumber_SNSUser: String [FK]
     +CitizenCardNumber_Recep: String [FK]
     +VaccinationCenter_ID: int [FK]
 }
