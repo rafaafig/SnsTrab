@@ -5,7 +5,7 @@
 title UC013 - Register vaccination center
 
 class Administrator {
-    +CC String[PK]
+    +CC_ADMIN String[PK]
     +Username: String
     +Password: String
 }
@@ -16,15 +16,20 @@ class SNS{
 }
 
 class VaccinationCenter {
-    +ID: Int [PK]
+    +ID_VACC: Int [PK]
     +Name: String
     +Location: String
     +ContactInformation: String
     +OperatingHours: String
 }
 
+class Pandemic{
+    +ID_Pandemic: Int [PK]
+    +Name_Pandemic: String
+}
 ' Relationships
 Administrator "*" -- "1" SNS : registers on >
 SNS "1" -- "*" VaccinationCenter : registers >
+Pandemic "1" -- "*" VaccinationCenter : because >
 
 @enduml
