@@ -46,10 +46,10 @@ public class SNS_User_Repository implements PersistableRepo{
     public SNS_User createSNS_User(DTO dto) throws Exception {
         SNS_User_DTO userDto = (SNS_User_DTO) dto;
         return new SNS_User.Builder()
-                .withCC(SNS_User_DTO.CC())
-                .withPassword(SNS_User_DTO.password())
-                .withE_mail(SNS_User_DTO.e_mail())
-                .withPhoneNumber(SNS_User_DTO.phoneNumber())
+                .withCC(userDto.CC())
+                .withPassword(userDto.password())
+                .withE_mail(userDto.e_mail())
+                .withPhoneNumber(userDto.phoneNumber())
                 .build();
     }
 

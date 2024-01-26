@@ -46,7 +46,7 @@ public class SNS_User implements DTOable<SNS_User_DTO> {
 
     @Override
     public SNS_User_DTO toDTO() {
-        SNS_User_DTO sns_user_dto = new SNS_User_DTO().Builder()
+        SNS_User_DTO sns_user_dto = new SNS_User_DTO.Builder()
                 .withCC(CC())
                 .withPassword(password())
                 .withE_mail(e_mail())
