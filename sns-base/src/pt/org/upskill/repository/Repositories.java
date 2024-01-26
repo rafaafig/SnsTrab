@@ -28,6 +28,7 @@ public class Repositories {
     BrandRepository brandRepository = new BrandRepository();
     FacilityRepository facilityRepository = new FacilityRepository();
     EmployeeRepository employeeRepository = new EmployeeRepository();
+    VaccinationCenterRepository vaccinationCenterRepository = new VaccinationCenterRepository();
 
 
     public VaccineTechRepository vaccineTechRepository() {return vaccineTechRepository;}
@@ -36,4 +37,5 @@ public class Repositories {
     public BrandRepository brandRepository() {return brandRepository;}
     public FacilityRepository facilityRepository() {return facilityRepository;}
     public EmployeeRepository employeeRepository() {return employeeRepository;}
+    public VaccinationCenterRepository vaccinationCenterRepository() {return vaccinationCenterRepository;}
 }
