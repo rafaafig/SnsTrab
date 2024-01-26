@@ -7,52 +7,52 @@ public class VaccinationCenterDTO implements DTO{
     private String contactinformation;
     private String operatinghours;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getContactinformation() {
+        return contactinformation;
+    }
+
+    public void setContactinformation(String contactinformation) {
+        this.contactinformation = contactinformation;
+    }
+
+    public String getOperatinghours() {
+        return operatinghours;
+    }
+
+    public void setOperatinghours(String operatinghours) {
+        this.operatinghours = operatinghours;
+    }
+
     public static class Builder {
         private Integer id;
         private String name;
         private String location;
         private String contactinformation;
         private String operatinghours;
-
-        public Integer getId() {
-            return id;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getLocation() {
-            return location;
-        }
-
-        public String getContactinformation() {
-            return contactinformation;
-        }
-
-        public String getOperatinghours() {
-            return operatinghours;
-        }
-
-        public void setId(Integer id) {
-            this.id = id;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public void setLocation(String location) {
-            this.location = location;
-        }
-
-        public void setContactinformation(String contactinformation) {
-            this.contactinformation = contactinformation;
-        }
-
-        public void setOperatinghours(String operatinghours) {
-            this.operatinghours = operatinghours;
-        }
 
         public VaccinationCenterDTO.Builder withId(int id) {
             this.id = id;
