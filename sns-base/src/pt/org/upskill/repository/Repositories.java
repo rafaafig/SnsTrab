@@ -29,6 +29,7 @@ public class Repositories {
     FacilityRepository facilityRepository = new FacilityRepository();
     EmployeeRepository employeeRepository = new EmployeeRepository();
     SNS_User_Repository SNS_UserRepository = new SNS_User_Repository();
+    PandemicRepository pandemicRepository = new PandemicRepository();
     VaccinationCenterRepository vaccinationCenterRepository = new VaccinationCenterRepository();
 
 
@@ -39,6 +40,7 @@ public class Repositories {
     public FacilityRepository facilityRepository() {return facilityRepository;}
     public EmployeeRepository employeeRepository() {return employeeRepository;}
     public VaccinationCenterRepository vaccinationCenterRepository() {return vaccinationCenterRepository;}
+    public PandemicRepository pandemicRepository(){ return pandemicRepository;}
 
     public SNS_User_Repository SNS_UserRepository() {
         return SNS_UserRepository;
