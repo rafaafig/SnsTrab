@@ -20,9 +20,9 @@ public class SNS_USERDB implements PersistableObject<SNS_User> {
             ps.setInt(1, object.CC());
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    sqlCmd = "update Employee set name = ?, position = ?, snsnumber = ?, email = ? where id = ?";
+                    sqlCmd = "update SNS_User set password = ?, e_mail = ?, phoneNumber = ?, where CC = ?";
                 } else {
-                    sqlCmd = "insert into Employee(name, position, snsnumber, email, id) values (?, ?, ?, ?, ?)";
+                    sqlCmd = "insert into SNS_User(CC, password, e_mail, phoneNumber) values (?, ?, ?, ?)";
                 }
                 //
                 try (PreparedStatement ps2 = connection.prepareStatement(sqlCmd)) {
