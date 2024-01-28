@@ -9,11 +9,6 @@ class Administrator {
     +Username: String
     +Password: String
 }
-class SNS{
-    +ID_Registo Int[PK]
-    +ID_VACCenter Int[FK]
-    +CC_ADM String[FK]
-}
 
 class VaccinationCenter {
     +ID_VACC: Int [PK]
@@ -28,8 +23,7 @@ class Pandemic{
     +Name_Pandemic: String
 }
 ' Relationships
-Administrator "*" -- "1" SNS : registers on >
-SNS "1" -- "*" VaccinationCenter : registers >
-Pandemic "1" -- "*" VaccinationCenter : because >
+Administrator "*" -- "*" Pandemic : registers because >
+Pandemic "1" -- "*" VaccinationCenter : causes >
 
 @enduml
