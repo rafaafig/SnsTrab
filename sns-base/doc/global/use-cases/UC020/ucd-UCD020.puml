@@ -4,38 +4,21 @@ skinparam shadowing false
 
 title UC020 - Register SNS User at Vaccination Center
 
-class VaccinationCenter {
-    + VaccinationCenter_ID : int [PK]
-    + Location : String
-    + AppointmentLists_ID : String [FK]
-}
 class Receptionist {
     +CitizenCardNumber_Recep: String [PK]
     +Password: String
-    +CitizenCardNumber_SNSUser: String [FK]
-
 }
 
-class SNSUser {
+class SNS_User {
     +CitizenCardNumber_SNSUser: String [PK]
-    +Name: String
-    +BirthDate: Date
-    +Sex: String
-    +PostalAddress: String
-    +PhoneNumber: String
+    +Password: String
     +EmailAddress: String
-    +SNSUserNumber: String
-}
-class SNS {
-    +Appointment_ID: String [PK]
-    +CitizenCardNumber_Recep: String [FK]
-    +VaccinationCenter_ID: int [FK]
+    +PhoneNumber: String
 }
 
 ' Relationships
-SNSUser "*" -- "*" Receptionist : >
-Receptionist "*" -- "1" SNS : registers >
-SNS "1" -- "*" VaccinationCenter : <
+Receptionist "*" -- "*" SNS_User : registers >
+
 
 
 @enduml
