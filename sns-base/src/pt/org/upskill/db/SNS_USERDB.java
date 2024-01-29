@@ -20,16 +20,16 @@ public class SNS_USERDB implements PersistableObject<SNS_User> {
             ps.setInt(1, object.CC());
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    sqlCmd = "update SNS_User set password = ?, e_mail = ?, phoneNumber = ?, where CC = ?";
+                    sqlCmd = "update SNS_User set password = ?, email = ?, phone_Number = ? where CC = ?";
                 } else {
-                    sqlCmd = "insert into SNS_User(CC, password, e_mail, phoneNumber) values (?, ?, ?, ?)";
+                    sqlCmd = "insert into SNS_User(CC, password, email, PHONE_NUMBER) values (?, ?, ?, ?)";
                 }
                 //
                 try (PreparedStatement ps2 = connection.prepareStatement(sqlCmd)) {
                     ps2.setInt(1, object.CC());
                     ps2.setString(2, object.password());
                     ps2.setString(3, object.e_mail());
-                    ps2.setInt(5, object.phoneNumber());
+                    ps2.setInt(4, object.phoneNumber());
                     ps2.executeUpdate();
                     return true;
                 }
@@ -70,8 +70,8 @@ public class SNS_USERDB implements PersistableObject<SNS_User> {
                         user = new SNS_User.Builder()
                                 .withCC(rs.getInt("CC"))
                                 .withPassword(rs.getString("password"))
-                                .withE_mail(rs.getString("e_mail"))
-                                .withPhoneNumber(rs.getInt("phoneNumber"))
+                                .withE_mail(rs.getString("email"))
+                                .withPhoneNumber(rs.getInt("phone_Number"))
                                 .build();
                     } catch (Exception e) {
                         e.printStackTrace();

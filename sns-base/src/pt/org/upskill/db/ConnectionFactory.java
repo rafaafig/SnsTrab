@@ -29,8 +29,8 @@ public class ConnectionFactory {
         if (connectionPoolRequest > dbConnectionList.size()) {
             c = new DatabaseConnection(
                     "jdbc:oracle:thin:@upskill.dnsfor.me:1521/freepdb1",
-                    "upskill09",
-                    "Nuno.123");
+                    "upskill08",
+                    "qwerty");
             dbConnectionList.add(c);
         }
         else {
