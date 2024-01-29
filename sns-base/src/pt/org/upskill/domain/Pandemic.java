@@ -1,30 +1,29 @@
 package pt.org.upskill.domain;
 
 
-import pt.org.upskill.dto.DTO;
 import pt.org.upskill.dto.DTOable;
 import pt.org.upskill.dto.PandemicDTO;
 
 public class Pandemic implements DTOable<PandemicDTO> {
     private Integer ID_Pandemic;
-    private String NamePandemic;
+    private String Name_Pandemic;
     public Integer ID_Pandemic(){ return this.ID_Pandemic;}
-    public String NamePandemic(){ return this.NamePandemic;}
+    public String Name_Pandemic(){ return this.Name_Pandemic;}
 
     private Pandemic(final Builder builder) {
         this.ID_Pandemic = builder.ID_Pandemic;
-        this.NamePandemic = builder.NamePandemic;
+        this.Name_Pandemic = builder.Name_Pandemic;
     }
 
     public static class Builder {
         private Integer ID_Pandemic;
-        private String NamePandemic;
+        private String Name_Pandemic;
         public Builder withID_Pandemic(final Integer ID_Pandemic){
             this.ID_Pandemic = ID_Pandemic;
             return this;
         }
-        public Builder withNamePandemic(final String NamePandemic){
-            this.NamePandemic = NamePandemic;
+        public Builder withName_Pandemic(final String Name_Pandemic){
+            this.Name_Pandemic = Name_Pandemic;
             return this;
         }
         public Pandemic build() { return new Pandemic(this);}
@@ -36,8 +35,8 @@ public class Pandemic implements DTOable<PandemicDTO> {
         if(ID_Pandemic() != null){
             builder.withID_Pandemic(ID_Pandemic());
         }
-        if (NamePandemic() != null) {
-            builder.withNamePandemic(NamePandemic());
+        if (Name_Pandemic() != null) {
+            builder.withName_Pandemic(Name_Pandemic());
         }
         return builder.build();
     }

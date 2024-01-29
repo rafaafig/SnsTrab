@@ -1,9 +1,6 @@
 package pt.org.upskill.ui;
 
-import pt.org.upskill.auth.Email;
-import pt.org.upskill.controller.EmployeeController;
 import pt.org.upskill.controller.PandemicController;
-import pt.org.upskill.dto.EmployeeDTO;
 import pt.org.upskill.dto.PandemicDTO;
 
 import static pt.org.upskill.ui.utils.Utils.readLineFromConsole;
@@ -17,13 +14,13 @@ public class RegisterPandemic extends UI {
         System.out.println("-----------------");
 
         try {
-            int idPandemic = Integer.parseInt(readLineFromConsole("ID Pandemic: "));
-            String namePandemic = readLineFromConsole("Pandemic Name: ");
+            int ID_Pandemic = Integer.parseInt(readLineFromConsole("ID_Pandemic: "));
+            String Name_Pandemic = readLineFromConsole("Name_Pandemic: ");
 
             //DTO
             PandemicDTO dto = new PandemicDTO.Builder()
-                    .withID_Pandemic(idPandemic)
-                    .withNamePandemic(namePandemic)
+                    .withID_Pandemic(ID_Pandemic)
+                    .withName_Pandemic(Name_Pandemic)
                     .build();
 
             // Registration

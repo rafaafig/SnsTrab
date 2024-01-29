@@ -4,13 +4,10 @@ package pt.org.upskill.repository;
 import pt.org.upskill.db.ConnectionFactory;
 import pt.org.upskill.db.DatabaseConnection;
 import pt.org.upskill.db.PandemicDB;
-import pt.org.upskill.db.SNS_USERDB;
 import pt.org.upskill.domain.Pandemic;
-import pt.org.upskill.domain.SNS_User;
 import pt.org.upskill.dto.DTO;
 import pt.org.upskill.dto.KeyValueDTO;
 import pt.org.upskill.dto.PandemicDTO;
-import pt.org.upskill.dto.SNS_User_DTO;
 import pt.org.upskill.session.Context;
 
 import java.sql.Connection;
@@ -48,7 +45,7 @@ public class PandemicRepository implements PersistableRepo {
         PandemicDTO pandemicDTO = (PandemicDTO) dto;
         return new Pandemic.Builder()
                 .withID_Pandemic(pandemicDTO.ID_Pandemic())
-                .withNamePandemic(pandemicDTO.NamePandemic())
+                .withName_Pandemic(pandemicDTO.NamePandemic())
                 .build();
     }
 
